@@ -7,6 +7,7 @@ export default function NewVideoForm() {
     const [cover, setCover] = useState('');
     const [url, setUrl] = useState('');
 
+    // Função para salvar o novo vídeo inserido
     function save() {
         const newVideo = {
             title,
@@ -14,10 +15,12 @@ export default function NewVideoForm() {
             url,
             cover
         }
-        
+
         reset();
     }
 
+
+    // função para resetar os dados do formulário após salvar
     function reset() {
         setTitle('');
         setDuration('');
