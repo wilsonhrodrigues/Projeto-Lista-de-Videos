@@ -14,7 +14,16 @@ export default function NewVideoForm() {
             url,
             cover
         }
-        console.log(newVideo);
+        
+        reset();
+    }
+
+    function reset() {
+        setTitle('');
+        setDuration('');
+        setCover('');
+        setUrl('');
+
     }
 
     
