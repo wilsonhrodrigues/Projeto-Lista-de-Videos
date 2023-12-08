@@ -7,6 +7,16 @@ export default function NewVideoForm() {
     const [cover, setCover] = useState('');
     const [url, setUrl] = useState('');
 
+    function save() {
+        const newVideo = {
+            title,
+            duration,
+            url,
+            cover
+        }
+        console.log(newVideo);
+    }
+
     
 
     return(
@@ -22,6 +32,8 @@ export default function NewVideoForm() {
 
             <label htmlFor="url">url:</label>
             <input id="url" type="text" value={url} onChange={(event) => setUrl(event.target.value)} />
+
+            <button onClick={save}>Salvar</button>
         </div>
     )
 }
